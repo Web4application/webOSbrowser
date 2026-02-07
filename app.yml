@@ -1,0 +1,20 @@
+# E.S.T. Framework Cloud Manifest
+runtime: nodejs20
+instance_class: F1
+service: default
+
+handlers:
+  # Route 1: Handle the Client Skin (.jst)
+  - url: /index.jst
+    static_files: public/index.jst
+    upload: public/index.jst
+    mime_type: application/javascript
+
+  # Route 2: Handle the Server Logic (.ejs & .est)
+  - url: /.*
+    script: auto
+    secure: always
+
+env_variables:
+  NODE_ENV: "production"
+  EST_CONFIG_PATH: "./config/web.est"
