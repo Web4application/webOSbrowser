@@ -1,0 +1,10 @@
+<dependency>
+    <groupId>io.ktor</groupId>
+    <artifactId>ktor-server-core-jvm</artifactId>
+    <version>2.3.0</version>
+</dependency>
+<dependency>
+    <groupId>io.ktor</groupId>
+    <artifactId>ktor-server-netty-jvm</artifactId>
+    <version>2.3.0</version>
+</dependency>
