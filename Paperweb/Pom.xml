@@ -33,3 +33,23 @@
         <version>2.3.0</version>
     </dependency>
 </dependencies>
+<dependencies>
+    <!-- Excel Reader (Apache POI) -->
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml</artifactId>
+        <version>5.2.3</version>
+    </dependency>
+
+    <!-- Web Server (Ktor) -->
+    <dependency>
+        <groupId>io.ktor</groupId>
+        <artifactId>ktor-server-core-jvm</artifactId>
+        <version>2.3.0</version>
+    </dependency>
+    <dependency>
+        <groupId>io.ktor</groupId>
+        <artifactId>ktor-server-netty-jvm</artifactId>
+        <version>2.3.0</version>
+    </dependency>
+</dependencies>
