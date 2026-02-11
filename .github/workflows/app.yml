@@ -17,4 +17,4 @@ handlers:
 
 env_variables:
   NODE_ENV: "production"
-  EST_CONFIG_PATH: "./config/web.est"
+  EST_CONFIG_PATH: "./config/com/web.est"
