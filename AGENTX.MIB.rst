@@ -1,5 +1,5 @@
-AGENTX-MIB DEFINITIONS ::= BEGIN
-
+AGENTX-MIB DEFINITIONS :
+:= BEGIN
 IMPORTS
  MODULE-IDENTITY, OBJECT-TYPE, Unsigned32, mib-2
     FROM SNMPv2-SMI
@@ -12,31 +12,10 @@ IMPORTS
 agentxMIB MODULE-IDENTITY
  LAST-UPDATED "200001100000Z" -- Midnight 10 January 2000
  ORGANIZATION "AgentX Working Group"
- CONTACT-INFO "WG-email:   agentx@dorothy.bmc.com
-               Subscribe:  agentx-request@dorothy.bmc.com
-               WG-email Archive:  ftp://ftp.peer.com/pub/agentx/archives
-               FTP repository:  ftp://ftp.peer.com/pub/agentx
-               http://www.ietf.org/html.charters/agentx-charter.html
-
-               Chair:      Bob Natale
-                           ACE*COMM Corporation
-               Email:      bnatale@acecomm.com
-
-               WG editor:  Mark Ellison
-                           Ellison Software Consulting, Inc.
-               Email:      ellison@world.std.com
-
-               Co-author:  Lauren Heintz
-                           Cisco Systems,
-               EMail:      lheintz@cisco.com
-
-               Co-author:  Smitha Gudur
-                           Independent Consultant
-               Email:      sgudur@hotmail.com
               "
  DESCRIPTION    "This is the MIB module for the SNMP Agent Extensibility
      Protocol (AgentX).  This MIB module will be implemented by
-     the master agent.
+     the main agent.
     "
 
   REVISION     "200001100000Z" -- Midnight 10 January 2000
@@ -172,7 +151,7 @@ agentxMIB MODULE-IDENTITY
    DESCRIPTION
      "The transport protocol in use for this connection to the
       subagent.
-     "
+     " 
    ::= { agentxConnectionEntry 3 }
 
  agentxConnTransportAddress OBJECT-TYPE
