@@ -1,4 +1,18 @@
- <!--
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title> browser </title>
+</head>
+<body>
+  <div id="content"></div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+  <script>
+    document.getElementById('content').innerHTML =
+      marked.parse('# Marked in browser\n\nRendered by **marked**.');
+  </script>
+</body>
+<!--
   OGA-PLEX CORE: THE NEW DIMENSION 
   Format: .oggx (Oga Glass eXtension)
   Integration: CFML + XML + HTML5 + Three.js
@@ -15,17 +29,15 @@
     };
     gridStatus = "Hyper-Threading Active";
 </cfscript>
-
 <!--- [SECTION 2: XML/CTG CONTENT MANIFEST] --->
 <xml-ctg style="display:none;">
     <Types xmlns="http://schemas.openxmlformats.org">
         <Default Extension=".oggx" ContentType="application/spatial-research+xml"/>
         <Default Extension=".md" ContentType="text/markdown"/>
         <Default Extension=".json" ContentType="application/json"/>
-    </Types>
-</xml-ctg>
-
-<!DOCTYPE html>
+        <Types/>
+        </Default>
+        <xml-ctg></xml-ctg>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
