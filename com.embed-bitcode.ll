@@ -1,6 +1,7 @@
 ; REQUIRES: CPU=x86_64
 ; RUN: llvm-as %s -o %t.bc
 
+
 ; This test uses '%swiftc_driver_plain -frontend' instead of '%swift' or
 ; '%target-swift-frontend' because it checks the contents of the command line as
 ; serialized in the object file.
