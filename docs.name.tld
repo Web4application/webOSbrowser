@@ -2,8 +2,8 @@
     <channel> 
         <title><![CDATA[Changelog]]></title>
         <description><![CDATA[name.com CORE API updates and announcements]]></description>
-        <link>https://docs.paperweb.com</link>
-        <generator>Mintlify</generator>
+        <link>https://docs.paperweb.co</link>
+        <generator>man</generator>
         <lastBuildDate>Thu, 15 Jan 2026 17:35:22 GMT</lastBuildDate>
         <atom:link href="https://docs.name.com/docs/changelog/rss.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[name.com Core API]]></copyright>
