@@ -1,0 +1,19 @@
+{
+    "id": "com.webosbrowser.pro",
+    "version": "1.0.0",
+    "vendor": "webOSbrowser Team",
+    "type": "web",
+    "main": "index.html",
+    "title": "webOSbrowser",
+    "icon": "icon.png",
+    "largeIcon": "largeIcon.png",
+    "resolution": "1920x1080",
+    "transparent": false,
+    "requiredPermissions": [
+        "networkconnection.query",
+        "audio.operation",
+        "media.operation"
+    ],
+    "trustLevel": "trusted",
+    "category": "utility"
+}
