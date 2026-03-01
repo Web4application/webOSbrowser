@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webOS Browser Hub</title>
+    <style>
+        :root { --glass: rgba(255, 255, 255, 0.1); --text: #fff; }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #0f0f0f; color: var(--text); overflow: hidden; display: flex; height: 100vh; }
+        
+        /* Sidebar Styles */
+        nav { width: 250px; background: rgba(30, 30, 30, 0.8); backdrop-filter: blur(10px); display: flex; flex-direction: column; padding: 20px; border-right: 1px solid var(--glass); }
+        .logo { font-size: 1.5rem; font-weight: bold; margin-bottom: 30px; color: #ff3e3e; }
+        .nav-item { padding: 15px; margin: 5px 0; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+        .nav-item:hover, .active { background: var(--glass); border-left: 4px solid #ff3e3e; }
+
+        /* Main Content Area */
+        main { flex: 1; display: flex; flex-direction: column; background: #000; }
+        #search-bar { padding: 15px; background: #1a1a1a; display: flex; gap: 10px; }
+        input { flex: 1; padding: 10px; border-radius: 5px; border: none; background: #333; color: #fff; }
+        
+        iframe { flex: 1; border: none; width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">webOS Browser</div>
+        <div class="nav-item active" onclick="loadPage('search')">🌐 Web Search</div>
+        <div class="nav-item" onclick="loadPage('podcast')">🎙️ Podcasts</div>
+        <div class="nav-item" onclick="loadPage('radio')">📻 Web-Radio</div>
+        <div class="nav-item" onclick="loadPage('social')">📱 Social Network</div>
+        <div class="nav-item" onclick="loadPage('market')">🛒 Marketplace</div>
+        <div class="nav-item" onclick="loadPage('vendor')">🏢 Vendor Spot</div>
+    </nav>
+
+    <main>
+        <div id="search-bar">
+            <input type="text" id="urlInput" placeholder="Enter URL or search query...">
+            <button onclick="handleSearch()" style="padding: 10px 20px; background: #ff3e3e; color: white; border: none; border-radius: 5px; cursor: pointer;">Go</button>
+        </div>
+        <iframe id="contentFrame" src="https://www.google.com"></iframe>
+    </main>
+
+    <script>
+        const frame = document.getElementById('contentFrame');
+        
+        function loadPage(type) {
+            // Update active state in UI
+            document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            // Define URLs for each internal "page"
+            const pages = {
+                'search': 'https://www.google.com',
+                'podcast': 'https://www.spotify.com', // Example Spotify Embed
+                'radio': 'https://tunein.com', // Example Radio Station
+                'social': 'https://www.msn.com', // Using MSN as a "Social Feed" placeholder
+                'market': 'https://www.amazon.com', 
+                'vendor': 'https://your-vendor-portal.com' // Placeholder for your custom vendor spot
+            };
+            frame.src = pages[type];
+        }
+
+        function handleSearch() {
+            const input = document.getElementById('urlInput').value;
+            if (input.includes('.') && !input.includes(' ')) {
+                frame.src = input.startsWith('http') ? input : 'https://' + input;
+            } else {
+                frame.src = 'https://www.google.com' + encodeURIComponent(input) + '&igu=1';
+            }
+        }
+    </script>
+</body>
+</html>
