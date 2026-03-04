@@ -1,5 +1,6 @@
 # Building Node.js
 
+
 Depending on what platform or features you need, the build process may
 differ. After you've built a binary, running the
 test suite to confirm that the binary works as intended is a good next step.
