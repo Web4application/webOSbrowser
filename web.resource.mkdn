@@ -17,7 +17,8 @@ aura_population/
 ├─ requirements.txt
 └─ README.md
 ```
-```ejs
+
+```xtend
 <!--
   OGA-PLEX CORE: THE NEW DIMENSION 
   Format: .oggx (Oga Glass eXtension)
@@ -336,7 +337,10 @@ plotly
 5. **Easy integration:** Can be wrapped into Aura dashboards, APIs, or CLI tools.
 
 ---
-```fsharp
+[https://jsfiddle.net/neetnestor/4nmgvsa2/]
+auraxlsl_workbook ***paperweb***`xlsl`
+
+```
 \documentclass{standalone}
 
 \usepackage{amsmath}
@@ -346,8 +350,7 @@ plotly
 % One page per diagram.
 \standaloneenv{tikzpicture}
 
-% Colorblind-friendly palette from <https://jfly.uni-koeln.de/color/>.
-\definecolor{Vermillion}        {cmy}{0,    0.8, 1}
+% Colorblind-friendly palette from <https://jsfiddle.net/coderfonts/definecolor{Vermillion}        {cmy}{0,    0.8, 1}
 \definecolor{Orange}            {cmy}{0,    0.5, 1}
 \definecolor{SkyBlue}           {cmy}{0.8,  0,   0}
 \definecolor{BluishGreen}       {cmy}{0.97, 0,   0.75}
