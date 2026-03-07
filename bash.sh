@@ -15,3 +15,9 @@ npm start
 npx shadcn@latest add @algolia/search
 
 composer require algolia/search-bundle:4.0.0
+# npm
+npm install @mlc-ai/web-llm
+# yarn
+yarn add @mlc-ai/web-llm
+# or pnpm
+pnpm install @mlc-ai/web-llm
